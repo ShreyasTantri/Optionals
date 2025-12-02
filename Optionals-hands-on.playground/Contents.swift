@@ -45,3 +45,30 @@ func guardCall_2() {
 
 guardCall_1()
 guardCall_2()
+
+
+// 6. Nil Coalescing Operator
+let name: String? = nil
+let game: String? = "Cricket"
+
+let displayName = name ?? "Shreyas"
+let displayGame = game ?? "Football"
+
+print(displayName)                              //  Shreyas
+print(displayGame)                              //  Cricket
+
+// 5. Optional chaining (on simple types)
+//optional string
+let names: String? = nil
+let uppercased = names?.uppercased()
+
+// optional array
+let number: [Int]? = [1,2,3]
+let firstElements = number?.first       // [1,2,3]
+
+let numbers: [Int]? = nil
+let firstElement = numbers?.first       // nil
+
+//  example if this was force unwrapped
+//let numb: [Int]? = nil
+//let firstElemen = numb! // crash - run time error
